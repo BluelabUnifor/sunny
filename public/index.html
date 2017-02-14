@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
@@ -19,64 +20,37 @@
     <link href="css/main.css" rel="stylesheet">
 
 </head>
+
 <body>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container bootstrap snippet">
-    <div class="tile tile-alt" id="messages-main">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container bootstrap snippet">
+        <div class="tile tile-alt" id="messages-main">
 
-           <div class="ms-body">
-            <div class="action-header clearfix">
+            <div class="ms-body">
+                <div class="action-header clearfix">
 
-              <!--  <div class="pull-left hidden-xs">
-                    <img src="image/watson.png" alt="" class="img-avatar m-r-10">
-                    <div class="lv-avatar pull-left">
 
-                    </div>
-                    <span>Watson</span>
-                </div> -->
-
+                </div>
 
             </div>
 
-          <!--  <div class="message-feed media">
-                <div class="pull-left">
-                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:00</small>
-                </div>
+            <div class="msb-reply">
+                <textarea id="input" onkeypress="handle(event)" placeholder="converse com o watson"></textarea>
+                <button onclick="enviarMensagem()"><i class="fa fa-paper-plane-o"></i></button>
             </div>
-
-            <div class="message-feed right">
-                <div class="pull-right">
-                    <img src="http://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
-                </div>
-                <div class="media-body">
-                    <div class="mf-content">
-                        Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.
-                    </div>
-                    <small class="mf-date"><i class="fa fa-clock-o"></i> 20/02/2015 at 09:30</small>
-                </div>
-            </div> -->
-
-
-
+            <div id="input-mic-holder">
+                <button id="input-mic">MICROFONE!!!</button>
+            </div>
+        </div>
+        <audio id="audio">
+          Your browser does not support the audio element.
+        </audio>
     </div>
 
-    <div class="msb-reply">
-        <textarea id="input" onkeypress="handle(event)" placeholder="converse com o watson"></textarea>
-        <button onclick="enviarMensagem()"><i class="fa fa-paper-plane-o"></i></button>
-    </div>
-    <div id="input-mic-holder">
-      <button id="input-mic">MICROFONE!!!</button>
-    </div>
-</div>
-
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="js/http.js"></script>
-<script src="js/blundleMicrofone.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/textToSpeech.js"></script>
+    <script src="js/conversation.js"></script>
+    <script src="js/blundleMicrofone.js"></script>
 </body>
+
 </html>

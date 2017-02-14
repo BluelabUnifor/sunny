@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 require('./rotas/conversation')(app);
 require('./rotas/speech-to-text')(app);
+require('./rotas/text-to-speech')(app);
 
 
 module.exports = app;
