@@ -45,6 +45,8 @@ function enviarMensagem() {
 function handle(e) {
     if (e.keyCode === 13) {
         enviarMensagem();
+        if(event.preventDefault) event.preventDefault();
+        return false; // evita a da espaco no input
     }
 }
 

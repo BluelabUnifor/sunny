@@ -27,7 +27,6 @@ module.exports = function(app) {
             var mensagem = {}
         }
 
-
         // console.log(mensagem);
         // Start conversation with empty message.
         conversation.message(mensagem, function(err, data) {
