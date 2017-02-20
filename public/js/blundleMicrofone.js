@@ -4572,9 +4572,8 @@ function speechToText() {
 
                   jsonStringify = JSON.stringify(json);
                   send(jsonStringify);
-                  $('#input').val('');
 
-                  speechToText(); // recursao sao legais
+                  speechToText();
 
                   //console.log(dialogue.results[0].alternatives[0].transcript);
 
