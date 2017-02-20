@@ -4521,16 +4521,19 @@ var watsonSpeech = require('watson-speech')
 
 var isLigado = false;
 var stream;
+var input_mic = $('#input-mic');
 
 function ligarMicrofone(){
 
 if(!isLigado){
   isLigado = true;
   speechToText();
+  input_mic.attr("src", 'image/microphone-ligado.png');
 } else {
   isLigado = false;
   stream.stop();
   stream.removeAllListeners();
+  input_mic.attr("src", 'image/microphone-desligado.png');
 }
 
 }
@@ -4577,13 +4580,15 @@ function speechToText() {
 
                 } else {
                   console.log('buxo');
+                  input_mic.attr("src", 'image/microphone-desligado.png');
                 }
 
               }
           })
 
           .catch(function(err) {
-            console.log('cabou :(');
+            console.log('fim da transmissão');
+            input_mic.attr("src", 'image/microphone-desligado.png');
 
           });
 
@@ -4591,7 +4596,7 @@ function speechToText() {
 
   }
 
-$('#input-mic').click(ligarMicrofone);
+input_mic.click(ligarMicrofone);
 
 },{"watson-speech":1}],50:[function(require,module,exports){
 

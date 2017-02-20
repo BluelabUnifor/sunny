@@ -37,10 +37,11 @@
             <div class="msb-reply">
                 <textarea id="input" onkeypress="handle(event)" placeholder="converse com o watson"></textarea>
                 <button onclick="enviarMensagem()"><i class="fa fa-paper-plane-o"></i></button>
+                <div id="input-mic-holder" class="mic">
+                    <img id="input-mic" src="/image/microphone-desligado.png">
+                </div>
             </div>
-            <div id="input-mic-holder">
-                <button id="input-mic">MICROFONE!!!</button>
-            </div>
+
         </div>
         <audio id="audio">
           Your browser does not support the audio element.
