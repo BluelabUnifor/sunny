@@ -1,0 +1,11 @@
+body {
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #767676;
+  background-color: #edecec;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
