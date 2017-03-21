@@ -1,6 +1,9 @@
 var http = new XMLHttpRequest();
 var texto = document.getElementById("input");
 
+//teste
+var isShow = true;
+
 var iniciar = {
     input: 'comecar_conversar'
 }
@@ -59,4 +62,15 @@ function send(json) {
         texto.value = '';
     }
 
+}
+
+function button_animation(){
+
+    if(isShow){
+      isShow = false;
+      $('#animation').removeClass('animated bounceInRight').addClass('animated bounceOutRight');
+    } else {
+      isShow = true;
+      $('#animation').removeClass('animated bounceOutRight').addClass('animated bounceInRight');
+    }
 }

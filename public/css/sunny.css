@@ -17,12 +17,10 @@
 .noite{
     background: #344c6a !important;
 }
-
 .graus{
     text-align: center;
     color: #fff;
     font-size: 60px;
-
 }
 
 .umidade{
@@ -91,9 +89,9 @@
     top:5px;
     right: -7px;
 }
-.altura{
+/*.altura{
     height: 312px !important;
-}
+}*/
 .posicao-balao{
     padding-top: 50%;
 }
