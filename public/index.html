@@ -56,7 +56,7 @@
                 </div>
                 <div class="row">
                     <div id="simbolos" class="">
-                        <div id="icon-balao" class="posicao-balao fade"><img class="full-image" src="/" /></div>
+                        <div id="icon-balao" class="posicao-balao fadeout"><img class="full-image" src="/" /></div>
                     </div>
 
                     <div class="col col-20"><img id="icon-termo" class="full-image" src="/" /></div>
@@ -70,7 +70,7 @@
       <div id= 'animation' class= 'animated bounceInRight'>
         <!-- <div class="container bootstrap snippet"> -->
         <div class="tile tile-alt" id="messages-main">
-            <div class="ms-body">
+            <div class="ms-body limit-overflow" id="scroll-fixed">
                 <div class="action-header clearfix">
                 </div>
             </div>
@@ -115,5 +115,11 @@
     <script src="js/sunny/services.js"></script>
 
 </body>
-
+  <script>
+    $(document).ready(function(){
+      var height = document.querySelector("body").offsetHeight;
+      document.querySelector("#scroll-fixed").style.height = (height-250)+"px";
+      // limit-overflow
+    });
+  </script>
 </html>

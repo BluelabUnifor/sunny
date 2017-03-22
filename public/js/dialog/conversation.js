@@ -15,6 +15,7 @@ send(jsonStringify);
 http.onreadystatechange = function() {
     if (http.readyState == XMLHttpRequest.DONE) {
         $(".ms-body").append('<div class="message-feed media"><div class="pull-left"><img src="img/watson.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + http.responseText + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
+        scroll();
         //para o watson falar pode ser encontrado no textToSpeech
         sendTextToSpeech(http.responseText);
         //alert(http.responseText);
@@ -58,7 +59,7 @@ function send(json) {
 
     if (obj.input != 'comecar_conversar') {
         $(".ms-body").append('<div class="message-feed right"><div class="pull-right"><img src="img/user.png" alt="" class="img-avatar"></div><div class="media-body"><div class="mf-content">' + obj.input + '</div><small class="mf-date"><i class="fa fa-clock-o"></i> ' + Date() + '</small></div></div>');
-
+        scroll();
         texto.value = '';
     }
 
@@ -73,4 +74,9 @@ function button_animation(){
       isShow = true;
       $('#animation').removeClass('animated bounceOutRight').addClass('animated bounceInRight');
     }
+}
+
+function scroll(){
+  var objDiv = document.getElementById("scroll-fixed");
+  objDiv.scrollTop = objDiv.scrollHeight;
 }

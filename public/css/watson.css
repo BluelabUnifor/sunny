@@ -194,3 +194,9 @@
     -webkit-user-select: none;
     -moz-user-select: none;
 }
+.limit-overflow{
+
+}
+.watson #messages-main .ms-body{
+  overflow-y: auto;
+}
