@@ -66,12 +66,11 @@ function send(json) {
 }
 
 function button_animation(){
-
     if(isShow){
       isShow = false;
-      $('#animation').removeClass('animated bounceInRight').addClass('animated bounceOutRight');
+      $('#animation').attr('class','animated bounceOutRight');
     } else {
       isShow = true;
-      $('#animation').removeClass('animated bounceOutRight').addClass('animated bounceInRight');
+      $('#animation').attr('class','animated bounceInRight');
     }
 }
