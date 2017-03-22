@@ -75,8 +75,3 @@ function button_animation(){
       $('#animation').removeClass('animated bounceOutRight').addClass('animated bounceInRight');
     }
 }
-
-function scroll(){
-  var objDiv = document.getElementById("scroll-fixed");
-  objDiv.scrollTop = objDiv.scrollHeight;
-}
