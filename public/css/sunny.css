@@ -107,6 +107,12 @@
     background-position: top center;
     background-repeat: no-repeat;
 }
+.dia-simbolo-falando{
+    background: url('../img/simbolo-sol-falando.gif'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
 .fade {
    opacity: 0;
    transition: opacity 3s ease-in-out;

@@ -1,5 +1,5 @@
-//teste
-//sendTextToSpeech('testando');
+//controllers.js
+var isPlay = false;
 
 function sendTextToSpeech(conversation) {
     console.log(conversation);
@@ -7,4 +7,13 @@ function sendTextToSpeech(conversation) {
     var url = '/api/synthesize?voice=pt-BR_IsabelaVoice&text=' + conversation;
     audio.src = url;
     audio.play();
+
+    audio.onloadedmetadata = function() {
+        isPlay = true;
+    }
+
+    $("#audio").bind("ended", function() {
+        isPlay = false;
+    });
+
 }
