@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
         var luz = 0;
         var porta = 0;
         var horario = 0;
-        var pessoas = 3;
+        var pessoas = 8;
         var temperatura;
         worker.postMessage(mensagem);
         //Não tiver no servidor
@@ -34,9 +34,7 @@ angular.module('starter.controllers', [])
         worker.addEventListener('message', function(mensagem) {
             //Thread retorna horario
             //isPlay setando no textToSpeech
-            if (isPlay) {
-                $("#simbolos").attr("class", "col col-75 padding-simbolo dia-simbolo-falando");
-            } else {
+            if (!isPlay){
 
                 if (mensagem.data.tipo == 'horarioRetorno') {
                     horario = mensagem.data.resultado;
@@ -52,15 +50,17 @@ angular.module('starter.controllers', [])
                         $("#simbolos").attr("class", "col col-75 padding-simbolo dia-simbolo");
                     }
 
-                    if (mensagem.data.resultado < 18) {
+                    if (mensagem.data.resultado < 12) {
                         $("#fundo").css("background", "#fcf8c5");
                         $("h3").css("color", "#b38b1c");
                         $("#icon-user").attr("src", "img/icon-user-dia.png");
+                        isNight = false;
 
-                    } else if (mensagem.data.resultado >= 18) {
+                    } else if (mensagem.data.resultado >= 12) {
                         $("#fundo").css("background", "#344c6a");
                         $("h3").css("color", "#fff");
                         $("#icon-user").attr("src", "img/icon-user-noite.png");
+                        isNight = true;
 
                     }
                 }

@@ -106,12 +106,19 @@
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
+
 }
 .dia-simbolo-falando{
     background: url('../img/simbolo-sol-falando.gif'); !important;
     background-size: contain;
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;,
+}
+.dia-simbolo-falando-noite{
+    background: url('../img/simbolo-sol-falando-noite.gif'); !important;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;,
 }
 .fade {
    opacity: 0;
